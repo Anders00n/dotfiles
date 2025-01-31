@@ -1,0 +1,2 @@
+set notermguicolors
+set number
