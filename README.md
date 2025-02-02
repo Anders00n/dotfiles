@@ -1,4 +1,4 @@
-# dofiles
+# dotfiles
 ## Arch Linux | Hyprland
 
 Hello there! I tried to create a minimalist rice for `Arch Linux` based on `Hyprland`.
