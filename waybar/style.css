@@ -19,6 +19,7 @@ window#waybar {
 #workspaces,
 #pulseaudio,
 #cpu,
+#battery,
 #memory,
 #network,
 #clock,
@@ -40,21 +41,20 @@ window#waybar {
 #clock:hover,
 #tray:hover {
     background: #444444; /* Средний серый на ховер */
-    color: #000000; /* Черный текст на ховер */
-    box-shadow: 0px 0px 4px #444444;
+    color: #ffffff; /* Белый текст на ховер */
 }
 
 /* 🎯 Workspaces (Compact, Minimalist) */
 #workspaces {
-    padding: 2px 4px;
+    padding: 2px 2px;
 }
 
 #workspaces button {
     background: #1c1c1c; /* Темно-серый для кнопок */
     color: #ffffff; /* Белый текст */
-    padding: 2px 5px;
+    padding: 2px 2px;
     margin: 2px;
-    border-radius: 4px;
+    border-radius: 2px;
     transition: background 0.15s ease-in-out;
 }
 
@@ -95,9 +95,8 @@ window#waybar {
 
 /* Visible Workspaces */
 #workspaces button.visible {
-    background: #f5c71d; /* Желтый для видимых рабочих пространств */
+    background: #ffffff; /* Желтый для видимых рабочих пространств */
     color: #000000;
-    box-shadow: inset 0px 0px 3px #f5d217;
 }
 
 /* 🔹 Clock Module (Minimalist) */

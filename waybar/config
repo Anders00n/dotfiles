@@ -1,10 +1,14 @@
 {
     "position": "top",
     "height": 32,
-    "modules-left": ["hyprland/workspaces"],
-    "modules-right": ["pulseaudio", "cpu", "memory","network", "clock" ,"tray"],
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-right": ["pulseaudio", "cpu", "memory","network", "battery", "tray"],
+    "modules-center": ["clock"],
     "tray": {
         "spacing": 10
+    },
+    "hyprland/window": {  
+    "format": "{}"
     },
     "clock": {
     	"interval": 1,
@@ -13,11 +17,11 @@
     	"tooltip": false,
     },
     "cpu": {
-        "format": "{usage}% CPU",
+        "format": "CPU {usage}%",
         "tooltip": false
     },
     "memory": {
-        "format": "{}% MEM"
+        "format": "M {}%"
     },
     "battery": {
         "states": {
@@ -25,26 +29,23 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% ",
-        "format-charging": "{capacity}%",
+        "format": "B {capacity}%",
+        "format-charging": "CB {capacity}%",
         "format-plugged": "{capacity}%",
-        "format-alt": "{time} ",
-        "format-icons": ["", "", "", "", ""]
+        "format-alt": "{time}",
     },
     "network": {
-        "format-wifi": "Wi-Fi",
-        "format-ethernet": "Wire",
+        "format-wifi": "Wi-Fi {signalStrength}",
+        "format-ethernet": "Wired",
         "format-linked": "{ifname} (No IP)",
         "format-disconnected": "NO",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-alt": "{ifname}: {ipaddr}",
+	"interval": "5"
     },
     "pulseaudio": {
-        "format": "{volume}% VOL / {format_source}",
-        "format-bluetooth": "{volume}% VOL {format_source}",
-        "format-bluetooth-muted": "MUTE {format_source}",
-        "format-muted": "MUTE {format_source}",
-        "format-source": "{volume}% MIC",
-        "format-source-muted": "MIC OFF",
+        "format": "V {volume}%",
+        "format-muted": "",
+        "format-bluetooth": "V {volume}%",
         "on-click": "pulsemixer"
-    }
+    },
 }
